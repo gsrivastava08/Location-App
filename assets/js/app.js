@@ -114,8 +114,8 @@ mapApp.showPosition = function(position){
   mapApp.map.panTo(currentPos);
   var marker =  new google.maps.Marker({
     position: currentPos,
-    title: 'Hello World!',
-    icon : 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+    title: 'Your location',
+    icon : 'images/Map-Marker-Ball-Right-Azure-icon.png'
   });
   $(".serachable").removeClass('hidden');
   if(mapApp.myPosistion){
