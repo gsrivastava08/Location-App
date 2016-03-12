@@ -146,7 +146,7 @@ mapApp.showBaseMap = function(){
   
   var mapProp = {
     center:new google.maps.LatLng(12.955466, 77.694159),
-    zoom:21,
+    zoom:19,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 
