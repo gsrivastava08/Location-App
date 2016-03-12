@@ -34,6 +34,16 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  },
+
+  '/find/:place': {
+    controller : 'PlacesController',
+    action : 'List'
+  },
+
+  '/category-list' : {
+    controller : 'CategoryController',
+    action : 'List'
   }
 
   /***************************************************************************

@@ -1,0 +1,24 @@
+.navbar-default {background-color: teal; border-color: #0CF7F7; color: #FFF;}
+.navbar-default .navbar-brand {color: #FFF;}
+.navbar-default .navbar-brand:hover {color: #FFF;}
+.mt-70{margin-top: 70px;}
+.map-container{
+    padding: 1px;
+    border: rgba(0, 128, 128, 0.3) 1px solid;
+    box-shadow: rgba(0, 128, 128, 0.25) 0px 0px 10px;
+}
+.window-name{font-weight: bold;color: #ED143D;margin-right: 15px;}
+.mw{max-width: 250px;}
+.window-open{
+    font-weight: bold;
+    color: #009800;
+}
+
+.window-close{
+    font-weight: bold;
+    color: #DC0000;
+}
+.window-rating{
+    font-weight: bold;
+    color: gray;
+}
