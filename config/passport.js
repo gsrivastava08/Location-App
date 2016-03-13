@@ -51,7 +51,8 @@ module.exports.passport = {
       clientID: '476234999216770',
       clientSecret: '87202c0d651e2ec1bc97d47e62a1ec02',
       scope: ['email'], /* email is necessary for login behavior */
-      profileFields: ['id', 'emails', 'name', 'gender']
+      profileFields: ['id', 'emails', 'name', 'gender'],
+      callbackURL : 'https://gsrivastava08-easymap.herokuapp.com/auth/facebook/callback'
     }
   }
 
