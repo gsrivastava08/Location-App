@@ -36,10 +36,11 @@ mapApp.loadCategories = function(){
     /*optional stuff to do after success */
     var template = $("#category-templ").html();
     var html = Mustache.to_html(template, data);
-    $("#main-category-list").append(html);
+    $("#main-category-list").html(html);
 
     $("#main-category-list").slimScroll({
-        height: '540px'
+        height: '460px',
+        color: '#008080'
     });
 
   });
@@ -79,11 +80,15 @@ mapApp.queryPlaces = function(type){
 
         var tmp_marker = new google.maps.Marker({
                           position: new google.maps.LatLng(dt.geometry.location.lat, dt.geometry.location.lng),
-                          title: dt.name
+                          title: dt.name,
+                          animation: google.maps.Animation.DROP
                         });
 
         mapApp.current_markers.push(tmp_marker);
-        mapApp.current_markers[i].setMap(mapApp.map);
+        window.setTimeout(function() {
+          mapApp.current_markers[i].setMap(mapApp.map);
+        }, i*200);
+
         mapApp.current_markers[i].addListener('click', function() {
           mapApp.shoInfowindow(i, mapApp.current_markers[i]);
         });
@@ -118,6 +123,7 @@ mapApp.showPosition = function(position){
     icon : 'images/Map-Marker-Ball-Right-Azure-icon.png'
   });
   $(".serachable").removeClass('hidden');
+  $("#main-category-list").show();
   if(mapApp.myPosistion){
 
     mapApp.myPosistion.setPosition(currentPos);
@@ -146,7 +152,7 @@ mapApp.showBaseMap = function(){
   
   var mapProp = {
     center:new google.maps.LatLng(12.955466, 77.694159),
-    zoom:19,
+    zoom:15,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 
