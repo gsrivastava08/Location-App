@@ -33,7 +33,16 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    view: 'login'
+  },
+
+  '/login': {
+    view: 'login'
+  },
+
+  '/mapApp' : {
+    controller : 'MapappController',
+    action : 'Render'
   },
 
   '/find/:place': {
@@ -44,8 +53,15 @@ module.exports.routes = {
   '/category-list' : {
     controller : 'CategoryController',
     action : 'List'
-  }
+  },
+  'get /logout': 'AuthController.logout',
+  'get /register': 'AuthController.register',
 
+  'post /auth/local': 'AuthController.callback',
+  'post /auth/local/:action': 'AuthController.callback',
+
+  'get /auth/:provider': 'AuthController.provider',
+  'get /auth/:provider/callback': 'AuthController.callback',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
