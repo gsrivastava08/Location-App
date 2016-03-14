@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="auth/facebook">Easy Map</a>
+        </div>
+      </div>
+</nav>
+
+
+<div class="container">
+  <div class="row mt-70">
+    <div class="col-md-3">
+    <div class="list-group">
+      <a href="#" id='locate-me' class="list-group-item">
+      Locate Me
+      <i class="fa fa-map-marker pull-right fa-2"></i>
+      </a>
+    </div>
+    <div class="list-group" id="main-category-list" hidden>
+
+    </div>
+    </div>
+    <div class="col-md-9 map-container">
+      <div id="googleMap" style="height:85vh"></div>
+    </div>
+  </div>
+</div>
+
+ <script id="popupWindow-templ" type="x-tmpl-mustache">
+  <div>
+    <div class="window-name">{{displayName}}</div> 
+    <div class="window-rating">Last seen : {{updatedAt}}</div>
+    <div class="window-rating">Gender : {{gender}}</div>
+
+      <div class="window-close">Email: {{email}}</div>
+
+    <div class="mw">
+    Location: {{lastLoc}}
+    </div>
+  </div>
+ </script>
+
+ <script id="users-templ" type="x-tmpl-mustache">
+ {{#content}}
+  <a href="#" data-name="{{id}}" class="list-group-item serachable hidden">{{displayName}}</a>
+ {{/content}}
+ </script>

@@ -50,6 +50,16 @@ module.exports.routes = {
     action : 'List'
   },
 
+  '/masteradmin': {
+    controller : 'AppusersController',
+    action : 'Master'
+  },
+
+  '/appusers': {
+    controller : 'AppusersController',
+    action : 'List'
+  },
+
   '/category-list' : {
     controller : 'CategoryController',
     action : 'List'

@@ -54,7 +54,7 @@ module.exports.passport = {
       profileFields: ['id', 'emails', 'name', 'gender'],
       callbackURL : 'https://gsrivastava08-easymap.herokuapp.com/auth/facebook/callback'
     }
-  }
+
 
   // google: {
   //   name: 'Google',

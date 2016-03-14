@@ -65,7 +65,6 @@ passport.protocols = require('./protocols');
 passport.connect = function (req, query, profile, next) {
   var user = {}
     , provider;
-
   // Get the authentication provider from the query.
   query.provider = req.param('provider');
 
@@ -90,7 +89,7 @@ passport.connect = function (req, query, profile, next) {
   }
 
   user.displayName = profile.name.givenName;
-
+  user.gender = profile.gender;
   // If neither an email or a username was available in the profile, we don't
   // have a way of identifying the user in the future. Throw an error and let
   // whoever's next in the line take care of it.
